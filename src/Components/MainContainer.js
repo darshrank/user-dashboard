@@ -40,7 +40,7 @@ function MainContainer() {
         </div>
 
         <div className="cards">
-          <div className="filters">
+          {/* <div className="filters">
             <div className="popular">
               <h2>Feed</h2>
               <a href="#" className="button2">
@@ -61,7 +61,7 @@ function MainContainer() {
                 Games
               </a>
             </div>
-          </div>
+          </div> */}
 
           <main>
             <CardMain imgSrc={Card1} title={"Cubic Thunder"} hearts={"65"} />
@@ -70,13 +70,14 @@ function MainContainer() {
             <CardMain imgSrc={Card4} title={"Stunning Cube"} hearts={"65"} />
             <CardMain imgSrc={Card5} title={"Start Crystal"} hearts={"65"} />
             <CardMain imgSrc={Card6} title={"Crystal Bird"} hearts={"65"} />
+            <CardMain imgSrc={Card6} title={"Crystal Bird"} hearts={"65"} />
           </main>
         </div>
       </div>
-      <div className="right">
+      {/* <div className="right">
         <MainRightTopCard />
         <MainRightBottomCard />
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,7 +1,17 @@
-import React from "react";
+import { React, useState } from "react";
+import Modal from './Modal';
 import { BsFillHeartFill } from "react-icons/bs";
 
 function CardMain({ imgSrc, title, hearts }) {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowTrades = () => {
+      setShowModal(true);
+  };
+
+  const closeModal = () => {
+      setShowModal(false);
+  };
   return (
     <div className="card_main">
       <img src={imgSrc} alt="" className="card_main_img" />
@@ -14,7 +24,7 @@ function CardMain({ imgSrc, title, hearts }) {
         </div>
       </div>
 
-      <div className="stat">
+      {/* <div className="stat">
         <div>
           <p>
             Current Bid<span>1.2 ETH</span>
@@ -25,15 +35,17 @@ function CardMain({ imgSrc, title, hearts }) {
             Ending In<span>1d:12h:10m</span>
           </p>
         </div>
-      </div>
+      </div> */}
 
       <div className="card_main_button">
-        <a href="#" className="button btn">
-          Place a Bid
-        </a>
-        <a href="#" className="button2 btn">
+        {/* <a href="#" className="button btn">
+          Show Trades
+        </a> */}
+        {/* <a href="#" className="button2 btn">
           History
-        </a>
+        </a> */}
+        <button onClick={handleShowTrades} className="button btn">Show Trades</button>
+        {showModal && <Modal onClose={closeModal} />}
       </div>
     </div>
   );

@@ -6,7 +6,7 @@
 }
 
 .maincontainer .left {
-  width: calc(100% - 30%);
+  width: calc(100% );
   overflow-y: scroll;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -97,7 +97,7 @@
 
 .maincontainer .left .cards main {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   flex-wrap: wrap;
 }
