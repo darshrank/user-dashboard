@@ -6,22 +6,22 @@ function CardMain({ imgSrc, title, hearts }) {
   const [showModal, setShowModal] = useState(false);
 
   const handleShowTrades = () => {
-      setShowModal(true);
+    setShowModal(true);
   };
 
   const closeModal = () => {
-      setShowModal(false);
+    setShowModal(false);
   };
   return (
     <div className="card_main">
-      <img src={imgSrc} alt="" className="card_main_img" />
+      {/* <img src={imgSrc} alt="" className="card_main_img" /> */}
       <div className="card_main_name">
         <h2>{title}</h2>
-        <div className="card_main_icon">
+        {/* <div className="card_main_icon">
           <i>
             <BsFillHeartFill /> <span>{hearts}</span>
           </i>
-        </div>
+        </div> */}
       </div>
 
       {/* <div className="stat">
@@ -44,7 +44,7 @@ function CardMain({ imgSrc, title, hearts }) {
         {/* <a href="#" className="button2 btn">
           History
         </a> */}
-        <button onClick={handleShowTrades} className="button btn">Show Trades</button>
+        <a href="/viewtrades" className="button btn">Show Trades</a>
         {showModal && <Modal onClose={closeModal} />}
       </div>
     </div>

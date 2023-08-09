@@ -2,13 +2,14 @@ import React, { useEffect } from "react";
 import "./Menu.css";
 import logo from "../img/logo.png";
 import {
-  FaDelicious,
-  FaShoppingCart,
+  FaUser,
+  FaReceipt,
   FaWallet,
   FaChartLine,
   FaRegClock,
   FaCog,
   FaSignOutAlt,
+  FaBook
 } from "react-icons/fa";
 
 function Menu() {
@@ -30,15 +31,13 @@ function Menu() {
       <img src={logo} alt="" />
 
       <ul id="mainMenu">
-        <Icon icon={<FaDelicious />} />
-        <Icon icon={<FaShoppingCart />} />
-        <Icon icon={<FaWallet />} />
-        <Icon icon={<FaChartLine />} />
-        <Icon icon={<FaRegClock />} />
+        <a href="/"><FaBook /></a>,
+        <a href="/adduser"><FaUser /></a>
+        <a href="/addtrade"><FaReceipt /></a>
       </ul>
 
       <ul className="lastMenu">
-        <Icon icon={<FaCog />} />
+        <Icon icon={<FaUser />} />
         <Icon icon={<FaSignOutAlt />} />
       </ul>
     </menu>
